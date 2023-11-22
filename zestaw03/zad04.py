@@ -1,37 +1,24 @@
-class Bug:
-    """
-    Klasa reprezentująca obiekty typu Bug.
+import functools
 
-    Każdy obiekt Bug posiada unikalny identyfikator i współdzielony licznik,
-    który zwiększa się przy tworzeniu obiektu i zmniejsza przy jego niszczeniu.
-    """
-    licznik = 0
+def pamiec(func):
+    cache = {}
 
-    def __init__(self):
-        """
-        Konstruktor inicjalizujący nowy obiekt Bug.
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        n = args[0]
 
-        Zwiększa współdzielony licznik i przypisuje identyfikator obiektu.
-        """
-        Bug.licznik += 1
-        self.id = Bug.licznik
+        if n not in cache:
+            result = func(*args, **kwargs)
+            cache[n] = result
+        else:
+            result = cache[n]
+        return result
 
-    def __del__(self):
-        """
-        Destruktor niszczący obiekt Bug.
+    return wrapper
 
-        Zmniejsza współdzielony licznik i wypisuje informację o zniszczeniu obiektu.
-        """
-        Bug.licznik -= 1
-        print(f'koniec, licznik: {Bug.licznik}, identyfikator: {self.id}')
+@pamiec
+def fibonacci(n):
+    return n if 0 <= n < 2 else fibonacci(n - 1) + fibonacci(n - 2)
 
-    def __str__(self):
-        """
-        Metoda zwracająca string z licznikiem i identyfikatorem obiektu Bug.
-        """
-        return f'licznik: {Bug.licznik}, identyfikator: {self.id}'
-
-bugs = []
 for i in range(100):
-    bugs.append(Bug())
-    print(bugs[-1])
+    print(fibonacci(i))
