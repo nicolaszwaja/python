@@ -1,0 +1,1 @@
+ gra ma się zakończyć jeśli piłeczka minie rakietkę
