@@ -1,0 +1,25 @@
+Bubble Sort
+R:Array sorted in 3.5 ms. Number of operations: 2510.
+S:Array sorted in 0.1 ms. Number of operations: 98.
+A:Array sorted in 4.7 ms. Number of operations: 3750.
+T:Array sorted in 2.4 ms. Number of operations: 1954.
+Shell sort
+R:Array sorted in 1.5 ms. Number of operations: 884.
+S:Array sorted in 0.5 ms. Number of operations: 396.
+A:Array sorted in 1.0 ms. Number of operations: 803.
+T:Array sorted in 1.2 ms. Number of operations: 606.
+Merge sort
+R:Array sorted in 1.1 ms. Number of operations: 572.
+S:Array sorted in 1.0 ms. Number of operations: 572.
+A:Array sorted in 1.1 ms. Number of operations: 572.
+T:Array sorted in 1.2 ms. Number of operations: 544.
+Quick sort
+R:Array sorted in 1.6 ms. Number of operations: 1030.
+S:Array sorted in 8.8 ms. Number of operations: 6370.
+A:Array sorted in 4.8 ms. Number of operations: 3870.
+T:Array sorted in 3.2 ms. Number of operations: 2230.
+Tim sort
+R:Array sorted in 3.0 ms. Number of operations: 2092.
+S:Array sorted in 0.3 ms. Number of operations: 98.
+A:Array sorted in 5.3 ms. Number of operations: 3896.
+T:Array sorted in 1.1 ms. Number of operations: 814.
